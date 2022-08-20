@@ -1,3 +1,5 @@
+var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={apiKey}"
+var apiKey= "a2a2c9850941869efc77b90f389336bf";
 class dailyweather{
     date = new this.date();
     icon = {
@@ -27,3 +29,11 @@ dailyweather.prototype.generateIconEnding = function(){
     const hour = this.date.getHours();
     return (hour >= 0 && hour <12)? 'n':'d';
 };
+
+
+
+
+
+
+renderCities();
+getCurrentWeather();

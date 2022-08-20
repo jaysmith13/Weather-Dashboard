@@ -1,0 +1,41 @@
+.jumbotron {
+    border-radius: 0;
+}
+
+#city-searcher {
+    width: auto;
+}
+
+#current-weather{
+    padding-left: 25px;
+}
+#empty-weather-storage{
+    color:aliceblue;
+    text-decoration: underline;
+    font: 1em sans-serif;
+}
+.weather-background{
+    background-color: whitesmoke;
+    align-content: center;
+}
+
+/*Uv index */
+.uv-index-moderate{
+    border-radius: auto;
+    color: gray;
+    background-color: yellow;
+}
+.uv-index-severe{
+    border-radius: auto;
+    color: gray;
+    background-color: red;
+}
+.uv-index-favorable{
+    border-radius: auto;
+    color: gray;
+    background-color: green;
+}
+#search-button-icon{
+    width: 20px;
+    display: inline-block;
+}
