@@ -5,6 +5,10 @@
  
  This application will show you a five day forecast for almost any city!
  
+ ## Deployed
+ 
+ https://jaysmith13.github.io/Weather-Dashboard/
+ 
  
  
  ## Screenshot
