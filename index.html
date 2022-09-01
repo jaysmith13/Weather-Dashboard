@@ -1,68 +1,107 @@
 <!DOCTYPE html>
-<html class="h-100">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale =1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-        <link rel="stylesheet" href="https://stackpath.boostrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"integrity="sha384-JcKb8q3iqJ61gNV9KG8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/34b9bc8a79.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet"href ="./assets/style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link 
+    rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Weather-Dashboard</title>
-
-    <style>
-        .search-entry:hover{
-            cursor: pointer;
-            text-decoration: underline;
-        }
-    @media only screen and (mid-width: 992px){
-        #dashboard {
-            flex-grow: 1;
-        }
-        #five-day-weather-card{
-            width: 20%;
-        }
-    }
-    </style>
 </head>
-<body class="h-100">
-<main class="container-fluid h-100 d-flex flex-column">
 
-    <div class="row">
-        <div class="col p-0">
-            <div class= "jumbotron jumbotron-fluid py-1 mb-0 bg-dark">
-                <div class="container-fluid">
-                    <h1 class="text-center text-light">Weather-Dashboard</h1>
-          </div>
+<body class="body">
+    <header class="header">
+        <div class="h1-container d-flex translate-middle bg-dark justify-content-center">
+            <h1 class="h1 text-light">Weather-Dashboard</h1>
         </div>
-    </div>
-</div>
-<div class="row" id="dashboard">
-<div class="col col-lg-3 py-3 bg-light" id="search-bar">
-    <form class="form-group" id="search-city">
-        <label for="city-name" class="h4">Search for a city</label>
-        <div class="form-inline">
-            <input type="text" class="form-control w-75" id="city-name">
-            <button type="submit" class="btn  btn-primary"id="search"><i class="fas fa-search"></i><button>
+    </header>
+
+ <main class="main">
+   <div id="container-fluid">
+     <div id="row page-content">
+        <div id="col-sm-4 bg-light p-0">
+          <div id="form-container">
+               <form id="search-form">
+                 <div id="row m-0">
+                    <label for="search-input" class="search-label m-0 text-dark">City Weather Search:</label>
+                      </div>
+                          <div id="row m-0">
+                             <div id="col-sm-8 p-0 my-auto">
+                                 <input type="text" id="search-input" name="search-input" class="search-input rounded">
+                                         </div>
+                        <div id="col-sm-4 p-0">
+                            <button type="submit" class="btn bg-primary rounded search-button">
+                               <span id="glyphicon glyphicon-search"></span>
+                             </button>
+                          </div>
+                       </div>
+                    </form>
+                </div>
+                  
+<div id="search-input-container" class="row m-0 search-input-container">
+  
+                    </div>
+                </div>
+    
+                <div class="col-sm-8 p-0">
+                    
+                    <div id="current-weather-container" class="row d-block">
+                            <div class="current-title-container">
+                            <h2 id="current-title" class="current-title d-inline"></h2>
+                            <img id="current-weather-icon" class="d-inline" src="" alt="">
+                        </div>
+                        <p class="current-temperature" id="current-temperature"></p>
+                        <p class="current-humidity" id="current-humidity"></p>
+                        <p class="current-wind-speed" id="current-wind-speed"></p>
+                        <p class="current-uv-index" id="current-uv-index"></p>
+                        <p class="current-number rounded" id="current-number"></p>
+                    </div>
+                   
+                    <div class="row future-forecast-container d-block">
+                       
+                        <h2 class="future-forecast-title" id="future-forecast-title"></h2>
+                        <div id="forecasts-cards-container" class="forecasts-cards-container d-flex justify-content-between">
+                            <div class="future-card bg-primary rounded">
+                                <p class="future-date" id="future-date-1"></p>
+                                <img id="future-icon-1" src="" alt="">
+                                <p class="future-temp" id="future-temp-1"></p>
+                                <p class="future-humidity" id="future-humidity-1"></p>
+                            </div>
+                            <div class="future-card bg-primary rounded">
+                                <p class="future-date" id="future-date-2"></p>
+                                <img id="future-icon-2" src="" alt="">
+                                <p class="future-temp" id="future-temp-2"></p>
+                                <p class="future-humidity" id="future-humidity-2"></p>
+                            </div>
+                            <div class="future-card bg-primary rounded">
+                                <p class="future-date" id="future-date-3"></p>
+                                <img id="future-icon-3" src="" alt="">
+                                <p class="future-temp" id="future-temp-3"></p>
+                                <p class="future-humidity" id="future-humidity-3"></p>
+                            </div>
+                            <div class="future-card bg-primary rounded">
+                                <p class="future-date" id="future-date-4"></p>
+                                <img id="future-icon-4" src="" alt="">
+                                <p class="future-temp" id="future-temp-4"></p>
+                                <p class="future-humidity" id="future-humidity-4"></p>
+                            </div>
+                            <div class="future-card bg-primary rounded">
+                                <p class="future-date" id="future-date-5"></p>
+                                <img id="future-icon-5" src="" alt="">
+                                <p class="future-temp" id="future-temp-5"></p>
+                                <p class="future-humidity" id="future-humidity-5"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="text-danger" id="error"></p>
-    </form>
-    <div class="card">
-        <div class="card-header h5 text-center">
-            Search history
-        </div>
-        <ul class="list-group list-group-flush" id="search-history"></ul>
-    </div>
-</div>
-<div class="col-lg-9 py-3" id="city-info" data-city="">
-    <div class="w-100 h-100 d-flex" id="start-text">
-             <h2 class="m-auto text-center font-weight-nromal">Please input a city name to view<br>weather information about</h2>
-        </div>
-    </div>
-</div>
-</main>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXsz2htPH01sSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu250VKaIzap3H661ZH81PoY1FhbGU+6BZp6G7niu735Sk71N" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootrap.cdn.com/bootstrao/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfP1YxofvL8/KUEfyiJOMMV+rv" crossorigin="anonymous"></script>
-<script src="./assets/script.js"></script>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
